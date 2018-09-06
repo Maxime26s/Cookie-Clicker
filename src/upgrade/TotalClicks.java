@@ -3,10 +3,11 @@ package upgrade;
 import javafx.scene.control.Button;
 import player.Player;
 
-public class DoubleClick extends Upgrade{
-    public DoubleClick(Player player) {
-        textButton="Chance de double click: ";
-        cout=50;
+public class TotalClicks extends Upgrade{
+
+    public TotalClicks(Player player) {
+        textButton="Multiplicateur de click total: ";
+        cout=25;
         button=new Button(textButton+(int)(cout*player.getReduction()));
         button.setOnAction(event -> {
             achat(player);
@@ -15,6 +16,6 @@ public class DoubleClick extends Upgrade{
     }
 
     public void effet(Player player) {
-        player.setDoubleClick(player.getDoubleClick()+0.05f);
+        player.setTotalMultiplier(player.getTotalMultiplier()+0.0001f);
     }
 }

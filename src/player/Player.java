@@ -1,22 +1,43 @@
 package player;
 
+import javafx.scene.control.Label;
+
 public class Player {
-    int click;
+
+    boolean party;
+    int clicks;
+    int clickValue;
+    int totalClicks;
+    float totalMultiplier;
     float reduction;
     float doubleClick;
+    Label textClicks;
 
     public Player() {
-        click = 1;
+        party=false;
+        clicks=0;
+        clickValue = 1;
+        totalClicks = 0;
+        totalMultiplier=0.0001f;
         reduction = 1;
         doubleClick = 0;
+        textClicks = new Label("0");
     }
 
-    public int getClick() {
-        return click;
+    public int getClicks() {
+        return clicks;
     }
 
-    public void setClick(int click) {
-        this.click = click;
+    public void setClicks(int clicks) {
+        this.clicks = clicks;
+    }
+
+    public int getClickValue() {
+        return clickValue;
+    }
+
+    public void setClickValue(int clickValue) {
+        this.clickValue = clickValue;
     }
 
     public float getReduction() {
@@ -35,5 +56,35 @@ public class Player {
         this.doubleClick = doubleClick;
     }
 
+    public Label getTextClicks() {
+        return textClicks;
+    }
 
+    public void setTextClicks(Label textClicks) {
+        this.textClicks = textClicks;
+    }
+
+    public boolean isParty() {
+        return party;
+    }
+
+    public void setParty(boolean party) {
+        this.party = party;
+    }
+
+    public int getTotalClicks() {
+        return totalClicks;
+    }
+
+    public void setTotalClicks(int totalClicks) {
+        this.totalClicks = totalClicks;
+    }
+
+    public float getTotalMultiplier() {
+        return totalMultiplier;
+    }
+
+    public void setTotalMultiplier(float totalMultiplier) {
+        this.totalMultiplier = totalMultiplier;
+    }
 }
